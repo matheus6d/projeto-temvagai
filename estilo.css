@@ -49,3 +49,25 @@ body {
     border-radius: 5px;
     text-decoration: none;
 }
+
+@keyframes vagas{
+    from{
+        background: red;
+    }
+
+    to{
+        background: blue;
+    }
+}
+
+#caixa {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    background: red;
+    animation-name: vagas;
+    animation-duration: 5s;
+    
+   
+    
+}
