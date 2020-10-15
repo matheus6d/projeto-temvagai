@@ -1,6 +1,5 @@
-body, html {
+body {
     margin: 0;
-    height: 100%;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -51,6 +50,28 @@ body, html {
     text-decoration: none;
 }
 
+<<<<<<< HEAD
+@keyframes vagas{
+    from{
+        background: red;
+    }
+
+    to{
+        background: blue;
+    }
+}
+
+#caixa {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    background: red;
+    animation-name: vagas;
+    animation-duration: 5s;
+    
+   
+    
+=======
 /* RODAPE */
 
 footer{
@@ -61,39 +82,5 @@ footer{
     height: 50px;    
     text-align: center;
     line-height: 50px;
+>>>>>>> d3d48c0580e2c36a5bccaced42b032921f6c754f
 }
-
-/* BANNER */
-
-.hero-image {
-    background-image: url("https://www.mmoschini.com.br/wp-content/uploads/2016/09/background.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-
-.hero-text {
-    text-align: left;
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: #ff5e3a ;
-  }
-  
-  .hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .hero-text button:hover {
-    background-color: #555;
-    c
