@@ -50,7 +50,6 @@ body {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 @keyframes vagas{
     from{
         background: red;
@@ -71,7 +70,6 @@ body {
     
    
     
-=======
 /* RODAPE */
 
 footer{
@@ -82,5 +80,4 @@ footer{
     height: 50px;    
     text-align: center;
     line-height: 50px;
->>>>>>> d3d48c0580e2c36a5bccaced42b032921f6c754f
 }
