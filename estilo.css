@@ -10,9 +10,12 @@ body, html {
     font-family: 'Ubuntu', sans-serif;
     padding:  20px 10px;
     text-align: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    display: block; 
+    top: 50px;;
+    width: 100%;
+    left:0;
+    right:0;
 }
 
 .navbar a {
@@ -35,6 +38,12 @@ body, html {
 /* CONTEÚDO DE AVISO */ 
 
 .aviso {
+    position: fixed;
+    display: block; 
+    top: 0px;
+    width: 100%;
+    left:0;
+    right:0;
     text-align: center;
     padding: 1rem 0;
     background-color: #2c365d;
@@ -51,61 +60,9 @@ body, html {
     text-decoration: none;
 }
 
-@keyframes vagas{
-    from{
-        background: red;
-    }
-
-    to{
-        background: blue;
-    }
-}
-
-#caixa {
-    width: 200px;
-    height: 25px;
-    text-align: center;
-    background: red;
-    animation-name: vagas;
-    animation-duration: 5s;
-    
-}
-
 /* BANNER */
     
-.hero-image {
-     background-image: url("https://www.mmoschini.com.br/wp-content/uploads/2016/09/background.jpg");
-     height: 100%;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     position: relative;
- }
-  
-.hero-text {
-     text-align: left;
-     position: absolute;
-      top: 40%;
-     left: 20%;
-     transform: translate(-50%, -50%);
-    color: #ff5e3a ;
-}
-      
-.hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
-    text-align: center;
-    cursor: pointer;
-}
-      
-.hero-text button:hover {
-    background-color: #555;
-        
-}
+
     
 /* RODAPE */
 
