@@ -78,6 +78,12 @@ body, html {
     color: #272e4f;
 }
 
+.paragrafo {
+    margin-right: 200px;
+    margin-left: 200px;
+    color: #272e4f;
+}
+
 /*Subtítulo*/
 .subtitulo{
     text-align: center;
@@ -86,16 +92,62 @@ body, html {
 
 /*Pesquisa*/
 .pesquisa{
-    margin-left: 5rem;
+    margin-right: 200px;
+    margin-left: 200px;
     font-size: 18px;
     color: #272e4f;
+    background-color: #e4e4e4;
+    border-radius: 20px;
+}
+
+.localizacao{
+    margin-left: 20px;
+    font-weight: bolder;
+    
 }
 
 #local{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid hsla(0, 0%, 0%, 0.302);
-    background:#272e4f4d;
+    background:#272e4f21;
+    width:300px;
+    font-size: 18px;
+   
+}
+
+#locacao1{
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.botaoPesquisa{
+    color: white;
+    background-color: #ff5e3a ;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 40%;
     margin-bottom: 20px;
+   
+}
+
+.botaoPesquisa:hover {
+    background-color: #272e4f ;
+}
+
+/* RODAPE */
+
+.contato{
+    
 }
 
 
