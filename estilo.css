@@ -45,7 +45,7 @@ body, html {
     left:0;
     right:0;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
     background-color: #2c365d;
     color: white;
     /*background-image: linear-gradient(to right, #2D27FF, #FF0A6C); ;*/
@@ -60,10 +60,45 @@ body, html {
     text-decoration: none;
 }
 
-/* BANNER */
-    
+/*H1*/
 
-    
+.titulo{
+    color:  #ff5e3a;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+/*Parágrafos*/
+
+.paragrafo{
+    margin-right: 200px;
+    margin-left: 200px;
+    color: #272e4f;
+}
+
+/*Subtítulo*/
+.subtitulo{
+    text-align: center;
+    color: #b4b4b4;
+}
+
+/*Pesquisa*/
+.pesquisa{
+    margin-left: 5rem;
+    font-size: 18px;
+    color: #272e4f;
+}
+
+#local{
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 0%, 0.302);
+    background:#272e4f4d;
+    margin-bottom: 20px;
+}
+
+
 /* RODAPE */
 
 footer{
