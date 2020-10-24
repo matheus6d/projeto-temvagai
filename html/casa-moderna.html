@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/estilovisualizacao.css">
+    <meta name="autores" content="Amanda, Matheus e Thalita">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Visualização casa moderna</title>
+</head>
+
+<body>
+    <!-- CONTEÚDO DE AVISO -->
+    <div class="aviso">
+        <span>Confira informações sobre à COVID-19</span> <a href="https://coronavirus.saude.gov.br/" class="avisobotao">SABER MAIS</a>
+      </div>
+
+    <!-- MENU --> 
+    <div class="navbar">
+        <img class="navlogo" src="../img/logo.png">
+        <a href="index.html">Início</a>
+        <a href="index.html">Sobre</a>
+        <a href="index.html">Locações</a>
+        <a href="index.html">Contato</a>
+      </div >
+
+    <!-- TITULO --> 
+    <div class="titulos">
+        <h1 align="center" style= "margin-top: 10rem">Casa moderna</h1>
+    </div>
+
+    <!-- SLIDER --> 
+
+    <div class="container">
+    <div class="slider">
+        <div  style="max-width:500px"> <!-- Ele so funcionou depois que tirei o css do slider -->
+            <img class="animacao" src="../img/1.jpg" style="width:100%">
+            <img class="animacao" src="../img/2.jpg" style="width:100%">
+            <img class="animacao" src="../img/3.jpg" style="width:100%">
+        </div>
+        </div>
+        
+        <script> 
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("animacao");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>   
+      </div> 
+    
+    <!-- DESCRIÇÃO --> 
+   
+    <div class="subtitulo">
+        <p align="center">6 hóspedes · 3 quartos · 3 camas · 2 banheiros</p><br>
+    </div>
+
+        <div class="areaImagem">
+            <img class="img" src="../img/casa.png" />
+        </div>
+                
+        <div class="areaTexto">
+            <p><b>Casa inteira</b><br>Você terá a acomodação do tipo casa só para você.</p>
+        </div><br><br>
+
+        <div class="areaImagem2">
+            <img class="img" src="../img/limpeza.png" />
+        </div>
+                
+        <div class="areaTexto2">
+            <br><p><b>Limpo e higienizado</b><br>Este anfitrião se comprometeu com o processo de higienização em cinco etapas.</p>
+        </div>
+
+    <div class= "descrição">
+        
+    <div class="titulos"><h3>Descrição</h3></div>
+        <p align="justify"> Este espaço fica perto da Albufeira do Ermal e Serra da Cabreira, fica ainda relativamente perto do Gerês. Vai adorar este espaço por ser sossegado e tranquilo, o verdadeiro ar do campo. A casa é ideal para casais, aventuras individuais, famílias (com crianças), e grandes grupos. Este espaço fica perto da Albufeira do Ermal e Serra da Cabreira, fica ainda relativamente perto do Gerês. Vai adorar este espaço por ser sossegado e tranquilo, o verdadeiro ar do campo. A casa é ideal para casais, aventuras individuais, famílias (com crianças), e grandes grupos.</p><br>
+
+    <div class="titulos"><h3>O espaço</h3></div>
+        <p>A casa fica num local sossegado onde os hóspedes vão sentir logo à chegada que não existe ali tanta movimentação como nas cidades. Ideal para "fugir" ao stress do dia a dia e ter ali alguns dias de descanso.</p><br>
+
+    <div class="titulos"><h3>Acesso do hóspede</h3></div>
+        <p>Depois de concluir a reserva, os hóspedes podem usufruir da casa toda/inteira.</p><br>
+    
+    <div class="titulos"><h3>Valores</h3></div>
+        <p>Á partir de R$ XXXX.</p>
+        <br><br><br><br><br>
+
+    </div>
+
+    <div class="middle">
+        <a href="https://www.google.com/" class="btn btn1">Alugue aqui!</a>
+    </div>
+
+    <footer>
+      <p>Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+</html>
