@@ -155,7 +155,7 @@ footer{
 .grid{
     display: grid;
     grid-template-columns: 500px 500px ;
-
+    text-decoration: none;
 }
 
 /* Descrição do local */
@@ -164,7 +164,7 @@ footer{
     text-align: left;
     margin-left: 15rem;
     margin-right: -8rem;
-   
+    text-decoration: none;
 
  
     
