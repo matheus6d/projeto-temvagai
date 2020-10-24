@@ -1,0 +1,246 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* MENU */
+.navbar {
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    padding:  20px 10px;
+    text-align: center;
+    position: fixed;
+    display: block; 
+    top: 50px;;
+    width: 100%;
+    left:0;
+    right:0;
+    z-index: 2;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: #272e4f;
+    padding: 15px 20px;
+    text-decoration: none;
+    
+}
+  
+.navbar a:hover {
+    color: #ff5e3a ;
+}
+
+.navlogo{
+    margin-right: 60px;
+    height: 35px;
+}
+
+/* CONTEÚDO DE AVISO */ 
+
+.aviso {
+    position: fixed;
+    display: block; 
+    top: 0px;
+    width: 100%;
+    left:0;
+    right:0;
+    text-align: center;
+    padding: 1rem;
+    background-color: #2c365d;
+    color: white;
+    z-index: 2;
+}
+
+.avisobotao {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: #ff5e3a ;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 2;
+}
+
+ /* BANNER */
+    
+.hero-image {
+     background-image: url("https://www.mmoschini.com.br/wp-content/uploads/2016/09/background.jpg");
+     height: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+ }
+  
+.hero-text {
+     text-align: left;
+     position: absolute;
+      top: 40%;
+     left: 20%;
+     transform: translate(-50%, -50%);
+    color: #ff5e3a ;
+}
+      
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+      
+.hero-text button:hover {
+    background-color: #555;
+        
+}
+    
+/* RODAPE */
+
+footer{
+    bottom: 0;
+    background-color: #ff5e3a;
+    color: #FFF;
+    width: 100%;
+    height: 50px;    
+    text-align: center;
+    line-height: 50px;
+}
+* { margin: 0; padding: 0; }
+
+/* SLIDER */
+
+.slider{
+    margin-left: 430px; 
+}
+
+/* IMAGENS */
+
+.areaImagem{
+    float:left;
+    margin-top:10px;
+    margin-left:80px;
+}
+
+.areaImagem img{
+    width:20px;
+}
+
+.areaImagem:hover{
+    width:60px;
+}
+
+.areaTexto p{
+    float:left;
+    max-width:500px;
+    margin-left:20px;
+    LINE-HEIGHT:25px;
+}
+
+.areaImagem2 img{
+    float:left;
+    width:30px;
+    margin-top:40px;
+    margin-left:-410px;
+    
+}
+
+.areaTexto2 p{ 
+    margin-top:10px;
+    float:left;
+    max-width:700px;
+    margin-left:120px;
+    LINE-HEIGHT:25px;
+}
+
+/* TEXTOS */
+
+.descrição{
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 70px;
+  margin-right: 70px;
+  LINE-HEIGHT:25px;
+  margin-top:100px;
+}
+
+.titulos{
+    color: #272e4f;;  
+    margin-bottom: 1rem;
+    animation: color 4s linear infinite alternate;
+}
+
+.titulos:hover {
+    color: #ff5e3a ;
+    font-weight: bold;
+}
+
+.subtitulo{ 
+    text-align: center;
+    color: #272e4f;
+    margin-top: 2rem;
+}
+
+.subtitulo:hover {
+    color: #494847 ;
+    font-weight: bold;
+    font-size: large;
+}
+
+/* BOTÃO */
+
+  .middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .btn{
+    position: relative;
+    display: block;
+    color: #FFF;
+    font-size: 14px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    margin-top: 120rem;
+    animation: change-background 4s linear infinite alternate;
+    border-radius: 5px;  
+  }
+
+  .btn::before{
+    background: #ff5e3a;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  
+  .btn1::before{
+    width: 0%;
+    height: 100%;
+  }
+  
+  .btn1:hover::before{
+    width: 100%;
+  }
+
+@keyframes change-background {
+  50% {
+    background: #ff5e3a;
+  }
+  100% {
+    background: #272e4f;
+  }
+}
