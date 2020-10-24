@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/estilovisualizacao.css">
+    <meta name="autores" content="Amanda, Matheus e Thalita">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Visualização mini-apartamento</title>
+</head>
+
+<body>
+    <!-- CONTEÚDO DE AVISO -->
+    <div class="aviso">
+        <span>Confira informações sobre à COVID-19</span> <a href="https://coronavirus.saude.gov.br/" class="avisobotao">SABER MAIS</a>
+      </div>
+
+    <!-- MENU --> 
+    <div class="navbar">
+        <img class="navlogo" src="../img/logo.png">
+        <a href="index.html">Início</a>
+        <a href="index.html">Sobre</a>
+        <a href="index.html">Locações</a>
+        <a href="index.html">Contato</a>
+      </div >
+
+    <!-- TITULO --> 
+
+    <div class="titulos">
+        <h1 align="center" style= "margin-top: 10rem">Mini apartamento</h1>
+    </div>
+        
+    <!-- SLIDER --> 
+    <div class="slider">
+        <div  style="max-width:500px"> <!-- Ele so funcionou depois que tirei o css do slider -->
+            <img class="animacao" src="../img/9.jpg" style="width:100%">
+            <img class="animacao" src="../img/10.jpg" style="width:100%">
+            <img class="animacao" src="../img/11.jpg" style="width:100%">
+        </div>
+        </div>
+        
+        <script> 
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("animacao");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>
+        
+    <!-- DESCRIÇÃO --> 
+
+    <div class="subtitulo">
+        <p align="center">2 hóspedes · Estúdio · 1 cama · 1 banheiro</p><br>
+    </div>
+
+        <div class="areaImagem">
+            <img class="img" src="../img/casa.png" />
+        </div>
+                
+        <div class="areaTexto">
+            <p><b>Apartamento inteiro</b><br>Você terá a acomodação do tipo apto só para você.</p>
+        </div><br><br>
+
+        <div class="areaImagem2">
+            <img class="img" src="../img/wifi.png" />
+        </div>
+                
+        <div class="areaTexto2">
+            <br><p><b>Wi-Fi</b><br>Este é um dos poucos lugares na região com esse recurso.</p>
+        </div>
+
+    <div class= "descrição">
+
+        <div class="titulos"><h3>Descrição</h3></div>
+            <p align="justify">Mini apartamento lindo com aproximadamente 15 mt2, mobiliado, próximo de toda infraestrura que uma pessoa precisa. Ë a 650 da estação de metro vilarinho, 650 m do shopping estação, 700 mts da academia smart fit, 1 km do supermercado EPA, 1 km do Macdonald, 850 mts da faculdade FAMINAS, 1,5 km da UNA LINHA VERDE, e a 850 mts da Hospital Risoleta Neves.Mini apartamento lindo com aproximadamente 15 mt2, mobiliado, próximo de toda infraestrura que uma pessoa precisa. Ë a 650 da estação de metro vilarinho, 650 m do shopping estação, 700 mts da academia smart fit, 1 km do supermercado EPA, 1 km do Macdonald, 850 mts da faculdade FAMINAS, 1,5 km da UNA LINHA VERDE, e a 850 mts da Hospital Risoleta Neves.</p><br>
+
+        <div class="titulos"><h3>O espaço</h3></div>
+            <p>Lindo mini-apartamento com aproximadamente 15 mt2, mobiliado, perto de toda infraestrutura que uma pessoa precisa.</p><br>
+
+        <div class="titulos"><h3>Acesso do hóspede</h3></div>
+            <p>Total acesso ao apartamento e as areas dependentes.</p><br>
+        
+        <div class="titulos"><h3>Valores</h3></div>
+            <p>Á partir de R$ XXXX.</p>
+            <br><br><br><br><br>
+
+    </div>
+
+    <div class="middle">
+        <a href="https://www.google.com/" class="btn btn1">Alugue aqui!</a>
+    </div>
+
+    <footer>
+       <p>Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+
+</html>
