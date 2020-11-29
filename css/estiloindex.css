@@ -1,8 +1,9 @@
-body, html {
+.body, html {
     margin: 0;
     height: 100%;
     font-family: 'Ubuntu', sans-serif;
     scroll-behavior: smooth;
+    background-color: white;
 }
 
 /* MENU */
@@ -17,24 +18,40 @@ body, html {
     width: 100%;
     left:0;
     right:0;
+    
 }
 
 .navbar a {
     font-size: 20px;
-    color: #272e4f;
+    color: #ff5e3a;
     padding: 15px 20px;
     text-decoration: none;
-    
 }
   
 .navbar a:hover {
-    color: #ff5e3a ;
+    color: #2c365d ;
 }
 
 .navlogo{
     margin-right: 60px;
     height: 35px;
 }
+
+.botaomenu {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: #ff5e3a ;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+}
+
+.botaomenu:hover {
+    color: #2c365d ;
+}
+
+
 
 /* CONTEÚDO DE AVISO */ 
 
