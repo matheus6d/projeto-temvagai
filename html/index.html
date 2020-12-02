@@ -22,14 +22,15 @@
         <a href="#sobre">Sobre</a>
         <a href="#locacoes">Locações</a>
         <a href="#contato">Contato</a>
-        <button id="mudarsite" class="botaomenu" onclick="myFunction()">Mudar Cor</button>
+        <input type="button" class="botaomenu" onclick="mudarCSS('../css/estiloindexCORES.css', 0);" value="Mudar Cor">
       </div >
     
     <!-- IMAGEM INICIAL -->
     <div id="inicio">
       <img src="../img/fundo02.png">
+      
     </div>
-
+    
     <br  id="sobre" >
     <!-- SOBRE -->
     <h1 class="titulo" >Sobre nós</h1>
@@ -49,12 +50,16 @@
           a melhoria do sistema de formação de quadros que corresponde às necessidades.
           No mundo atual, o julgamento imparcial das eventualidades pode nos levar a considerar 
           a reestruturação dos índices pretendidos.</p>
-        <p id="locacoes">Desenvolvedores: Amanda Oliveira - 0000 - Integral & Matheus Medeiros Santana - 5188 - Integral & Thalita Mendonça Antico - 5141 - Noturno </p>
+        <p id="locacoes"><b>Informações do sistema: </b>Esse sistema foi desenvolvido com o objetivo de demonstrar os conhecimentos 
+          práticos aprendidos na disciplina SIN 143, ministrada pelo Professor Doutor Clausius Reis. O sistema desenvolvido consiste
+          em um sistema de aluguel de locais por dias ou temporadas, com campos de pesquisa, informações das pesquisas e layouts
+          integrados. Informações dos desenvolvedores: Amanda Oliveira Nascimento - 5149 - Integral & Matheus Medeiros Santana - 
+          5188 - Integral & Thalita Mendonça Antico - 5141 - Noturno </p>
           <br><br>
          
     </div>
     
-    <!-- LOCAÇÕES -->
+    <!-- LOCAÇÕES
     <div class="fundoPesquisa" >
       
       <br>
@@ -91,11 +96,25 @@
         <a href="resultado.html" ><button class="botaoPesquisa">Pesquisar melhor locação</button></a>
        
     </div>
-    
+     -->
     <br><br><br><br>
 
   </div>
 
+  <form name="pesquisa" method="post" action="#" onsubmit="return validaForm(this);">
+    <p>Localização: <input type="text" name="local" id="local" /></p>
+    <p>Quantidade de pesssoas:
+      <select name="quantidade" id="quantidade">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+     <p>Data: <input type="date" name="data"  id="data"></p>
+    </p><label><input type="submit" name="sbt" value="Enviar" /></label></p>
+  </form>
+  
     
 
     <!-- Contato -->
@@ -116,16 +135,108 @@
       </footer>
     
 <script>
-function myFunction() {
-  var x = document.getElementsByClassName("navbar");
-    x[0].style.backgroundColor = "#272e4f";
-  
-  var y = document.getElementsByClassName("aviso");
-  y[0].style.backgroundColor = "black";
+function mudarCSS(cssFile, cssLinkIndex) {
 
-  var z = document.getElementsByClassName("body");
-  z[0].style.backgroundColor = "#272e4f";
-  
+  var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+  var newlink = document.createElement("link");
+
+  newlink.setAttribute("rel", "stylesheet");
+  newlink.setAttribute("type", "text/css");
+  newlink.setAttribute("href", cssFile);
+
+  document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+}
+
+function validaForm(frm) {
+/*
+o parâmetro frm desta função significa: this.form,
+pois a chamada da função - validaForm(this) foi
+definida na tag form.
+*/
+    //Não receber localização vazia
+    if(frm.local.value == "") {
+        alert("Por favor, preencha a localização!");
+        frm.local.focus();
+        return false;
+    }
+
+    //Não receber numero
+    if(!isNaN(frm.local.value)) {
+        alert("Por favor, não preencher com número!");
+        frm.local.focus();
+        return false;
+    } 
+
+    if(frm.local.value.lenght < 3) {
+        alert("Por favor, aaaaaaaaa!");
+        frm.local.focus();
+        return false;
+    }
+
+    //Não receber data vazia
+    if(frm.data.value == "") {
+        alert("Por favor, preencha a data!");
+        frm.data.focus();
+        return false;
+    }
+
+    var strData = "06/12/2020";
+    var partesData = strData.split("/");
+    var data = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+
+    if(data > new Date('06/12/2020')){ 
+        alert("Por favor, preencha a data maior que hoje!");
+        frm.data.focus();
+        return false;
+    }
+
+    
+
+    
+
+    // O utilizador necessita de selecionar um dos dois
+    //radio buttons: Masculino ou Feminino.
+    escolhaSexo = -1; //valor negativo default (padrão) que significa que nada foi escolhido ainda.
+    //No bloco de código abaixo foi criado um ciclo entre
+    //os radios button com o mesmo nome (sexo)
+    for(x = frm.sexo.lenght -1; x > -1; x--) {
+        /*
+        x = frm.sexo.lenght -1 é a mesma coisa que: x = 2-
+        1, que resulta em 1.
+        x > -1 significa que o valor de x não pode ser igual a -1 e
+        sim maior, porque -1 significa que nada foi escolhido.
+        x-- significa que há um decremento no valor x, é algo como:
+        x = 1, x= 0 e pára pois x não pode ser -1.
+        */
+        if(frm.sexo[x].checked) { //checked quer dizer selecionado,
+           //então verifica se o primeiro (0) ou o
+           //segundo (1) radio button foi selecionado (checked).
+           escolhaSexo = x; //atribui à variável escolhaSexo o valor X.
+        }
+    }
+    //se nenhuma das opções (masculino ou feminino) forem
+    //escolhidas, mostra um alerta e cancela o envio.
+    if(escolhaSexo == -1) {
+        alert("qual o seu sexo?");
+        frm.sexo[0].focus();
+        return false;
+    }
+    /* valida a profissão:
+    O utilizador tem de escolher uma entre as três opções
+    (Programador, Designer e Tester).
+    */
+    if(frm.prof.value == "" || from.prof.value == "Todas") {
+        alert("De momento, precisamos de especialistas nas três áreas indicadas");
+        frm.prof.focus();
+        return false;
+    }
+    //Valida a textArea, que é como validar um campo de texto simples.
+    if(frm.sobre.value == "" || frm.sobre.value == null) {
+        alert("Por favor, conte-nos um pouco sobre si.");
+        frm.sobre.focus();
+        return false;
+    }
 }
 </script>
 
