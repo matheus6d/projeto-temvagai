@@ -23,13 +23,13 @@
 
 .navbar a {
     font-size: 20px;
-    color: #ff5e3a;
+    color: #2c365d;
     padding: 15px 20px;
     text-decoration: none;
 }
   
 .navbar a:hover {
-    color: #2c365d ;
+    color: #ff5e3a ;
 }
 
 .navlogo{
