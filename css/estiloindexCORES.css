@@ -1,0 +1,215 @@
+.body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* MENU */
+.navbar {
+    background-color: black;
+    font-family: 'Ubuntu', sans-serif;
+    padding:  20px 10px;
+    text-align: center;
+    position: fixed;
+    display: block; 
+    top: 50px;;
+    width: 100%;
+    left:0;
+    right:0;
+    
+}
+
+.navbar a {
+    font-size: 20px;
+    color:white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+  
+.navbar a:hover {
+    color: #ff5e3a ;
+}
+
+.navlogo{
+    margin-right: 60px;
+    height: 35px;
+}
+
+.botaomenu {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: #ff5e3a ;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+}
+
+.botaomenu:hover {
+    color: #2c365d ;
+}
+
+
+
+/* CONTEÚDO DE AVISO */ 
+
+.aviso {
+    position: fixed;
+    display: block; 
+    top: 0px;
+    width: 100%;
+    left:0;
+    right:0;
+    text-align: center;
+    padding: 1rem;
+    background-color: #2c365d;
+    color: white;
+    /*background-image: linear-gradient(to right, #2D27FF, #FF0A6C); ;*/
+}
+
+.avisobotao {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: #ff5e3a ;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/*H1*/
+
+.titulo{
+    color:  #ff5e3a;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+/*Parágrafos*/
+
+.paragrafo{
+    margin-right: 200px;
+    margin-left: 200px;
+    color: white;
+}
+
+/*Subtítulo*/
+.subtitulo{
+    text-align: center;
+    color: #b4b4b4;
+}
+
+/*Pesquisa*/
+
+.fundoPesquisa{
+    background-color: #2c365d;
+}
+
+.pesquisa{
+    margin-right: 200px;
+    margin-left: 200px;
+    font-size: 18px;
+    color: #272e4f;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.localizacao{
+    margin-left: 20px;
+    font-weight: bolder;  
+}
+
+#local{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 0%, 0.302);
+    background:#272e4f21;
+    width:300px;
+    font-size: 18px;
+   
+}
+
+#locacao1{
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.botaoPesquisa{
+    color: white;
+    background-color: #ff5e3a ;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+   
+}
+
+.botaoPesquisa:hover {
+    background-color: #272e4f ;
+}
+
+/* RODAPE */
+
+.tituloContato{
+    color:  #ff5e3a ;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    
+}
+
+.contato{
+    margin-right: 200px;
+    margin-left: 200px;
+    font-size: 18px;
+    color: #272e4f;
+    /*border: solid 1px;*/
+    border-radius: 20px;
+    animation: mudar-borda 4s linear infinite alternate;
+    background-color: white;
+}
+
+@keyframes mudar-borda {
+    25% {
+      border: solid 1px #ff5e3a;
+    }
+    50% {
+        border: solid 2px #272e4f;
+    }
+    75% {
+        border: solid 3px #ff5e3a;
+      }
+      100% {
+          border: solid 4px #272e4f;
+      }
+  }
+
+.paragrafoContato{
+    margin-left: 20px;
+    color: #272e4f;
+}
+
+/* RODAPE */
+
+footer{
+    bottom: 0;
+    background-color: #ff5e3a;
+    color: #FFF;
+    width: 100%;
+    height: 50px;    
+    text-align: center;
+    line-height: 50px;
+}
