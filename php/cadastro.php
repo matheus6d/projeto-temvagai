@@ -3,9 +3,89 @@
 
 <html>
     <head>
-      <title>Cadastro de vagas</title>
+    <title>Cadastro de vagas</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/estilocadastro.css">
+    <meta name="autores" content="Amanda, Matheus e Thalita">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Resultados da pesquisa</title>
+
     </head>
+
+    <style>
+
+/*H1*/
+
+.titulo{
+  color:  #ff5e3a;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+/*Parágrafos*/
+
+.paragrafo{
+  margin-right: 200px;
+  margin-left: 200px;
+  color: #272e4f;
+}
+
+/*Subtítulo*/
+.subtitulo{
+  text-align: center;
+  color: #b4b4b4;
+}
+   .cadastro{
+  margin-top: 200px;
+  margin-right: 200px;
+  margin-left: 200px;
+  font-size: 18px;
+  color: #272e4f;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+/* RODAPE */
+
+footer{
+  bottom: 0;
+  background-color: #ff5e3a;
+  color: #FFF;
+  width: 100%;
+  height: 50px;    
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 0px;
+}
+
+  </style>
+
+
+
+
 <body>
+
+ <!-- CONTEÚDO DE AVISO -->
+    
+ <div class="aviso">
+        <span>Confira informações sobre à COVID-19</span> <a href="https://coronavirus.saude.gov.br/" class="avisobotao">SABER MAIS</a>
+      </div>
+
+    <!-- MENU --> 
+    <div class="navbar">
+        <img class="navlogo" src="img/logo.png">
+        <a href="index.html">Início</a>
+        <a href="index.html">Sobre</a>
+        <a href="index.html">Locações</a>
+        <a href="index.html">Contato</a>
+        
+      </div >
+   
+    
+
+
     <?php
       $titulo = $descricao = $valor = $categoria = $imagem = "";
       $tituloEr = $descricaoEr = $valorEr = $categoriaEr = $imagemEr = "";
@@ -51,6 +131,8 @@
 
     ?>
 
+      <div class="cadastro">
+
       <h3> CADASTRO </h3>
       <p>(*) Campos obrigatórios</p><br>
 
@@ -79,7 +161,54 @@
             <input type="submit" name="submit" value="Enviar" >
         </form>
 
+    </div>
+
         <? include('inserir.php');?>
+
+      <br><br><br>
+
+        
+      <footer>
+      <p>Todos os direitos reservados</p>
+     </footer>
+
+     <script>
+     
+      
+      function validaForm(frm) {
+      /*
+      o parâmetro frm desta função significa: this.form,
+      pois a chamada da função - validaForm(this) foi
+      definida na tag form.
+      */
+          //Não receber localização vazia
+          if(frm.local.value == "") {
+              alert("Por favor, preencha a localização!");
+              frm.local.focus();
+              return false;
+          }
+      
+          //Não receber numero
+          if(!isNaN(frm.local.value)) {
+              alert("Por favor, não preencher com número!");
+              frm.local.focus();
+              return false;
+          } 
+      
+          if(frm.local.value.lenght < 3) {
+              alert("Por favor, aaaaaaaaa!");
+              frm.local.focus();
+              return false;
+          }
+      
+        
+      
+         
+          }
+      
+        
+      
+      </script>
         
         
 </body>
