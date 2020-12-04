@@ -22,7 +22,8 @@
                 $id    = $row['ID'];
                 $titulo  = $row['titulo'];
                 $descricao = $row['descricao'];
-                $valor = $row['valor'];$categoria = $row['categoria'];
+                $valor = $row['valor'];
+                $categoria = $row['categoria'];
 
                 echo "<tr><td>$id</td><td>$titulo</td><td>$descricao</td><td>$valor</td><td>$categoria<td>
                     <a href='altera.php?ID=$id'>x</a>

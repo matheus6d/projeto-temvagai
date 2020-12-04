@@ -1,8 +1,8 @@
 <?php include('conexão.php');
       $id = $_GET['ID'];
       $aux = "SELECT * FROM dados WHERE $id";
-      $aux1= mysql_query($conn, $aux);
-      $row = mysql_fetch_assoc($aux1);
+      $aux1= mysqli_query($conn, $aux);
+      $row = mysqli_fetch_assoc($aux1);
 
 ?>
 
@@ -59,7 +59,7 @@
       <h3> ALTERAR </h3>
       <p>(*) Campos obrigatórios</p><br>
 
-      <form name = "cadastro" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> ">
+      <form name = "cadastro" method="post">
             Titulo: <input type="text" name="titulo" value="<? echo $row['titulo']?>">
                     <span>* <?php echo $tituloEr;?></span>
                     <br><br>
@@ -83,9 +83,9 @@
             
             <input type="submit" name="submit" value="Enviar" >
         </form>
-
-        <?php include('a.php');?>
         
+        
+        <? include('aa.php');?>
         
 </body>
 </html>
