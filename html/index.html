@@ -31,6 +31,19 @@
       <img src="../img/fundo02.png">
       
     </div>
+
+    <?php
+    
+    include 'views-parts/slider.php';
+
+    headerHome();
+
+    slider([
+        "../img/img-1.jpg",
+        "../img/img-2.jpg",
+        "../img/img-3.jpg"
+    ]);
+    ?>
     
     <br  id="sobre" >
     <!-- SOBRE -->
@@ -103,14 +116,14 @@
   </div>
 -->
 
-  <div class="fundoPesquisa" >
-      
-    <br>
 
-    <h1 class="titulo">Locações</h1>
-    <h3 class="subtitulo">Faça uma pesquisa e encontre o lugar certo para você se hospedar!</h3>
+    <div  class="fundoPesquisa">
+      <br>
 
-     <div class="pesquisa"></div>
+        <h1 class="titulo">Locações</h1>
+        <h3 class="subtitulo">Faça uma pesquisa e encontre o lugar certo para você se hospedar!</h3>
+
+     <div class="pesquisa">
 
       <form name="pesquisa" method="post" action="#" onsubmit="return validaForm(this);">
         <p>Localização: <input type="text" name="local" id="local" /></p>
@@ -123,15 +136,15 @@
             <option>5</option>
           </select>
         <p>Data: <input type="date" name="data"  id="data"></p>
-        </p><label><input type="submit" name="sbt" value="Enviar" /></label></p>
+        </p><label><input class="botaoPesquisa" type="submit" name="sbt" value="Enviar" /></label></p>
       </form>
 
     </div>
   
-      <br><br><br><br>
+    <br><br><br><br>
 
+  </div>
  
-    
 
     <!-- Contato -->
     <h1 class="tituloContato"  id="contato">Contato</h1>
