@@ -1,6 +1,6 @@
     <?php
 
-        include('conexão.php');
+        include('conexao.php');
         $id = $_GET['ID'];
 
     
