@@ -1,4 +1,4 @@
-<?php include('conexão.php');
+<?php include('conexao.php');
       $id = $_GET['ID'];
       $aux = "SELECT * FROM dados WHERE $id";
       $aux1= mysqli_query($conn, $aux);
