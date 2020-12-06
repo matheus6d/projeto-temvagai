@@ -1,5 +1,5 @@
 
-<? include('conexao.php');?>
+<?php include('conexao.php');?>
 
 <html>
     <head>
@@ -87,6 +87,9 @@ footer{
 
 
     <?php
+
+    session_start();
+
       $titulo = $descricao = $valor = $categoria = $imagem = "";
       $tituloEr = $descricaoEr = $valorEr = $categoriaEr = $imagemEr = "";
 
