@@ -87,6 +87,49 @@ body, html {
     color: #b4b4b4;
 }
 
+/*Pesquisa*/
+
+.novabusca {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: #ff5e3a ;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+
+.pesquisa{
+    margin-top: 200px;
+    margin-right: 200px;
+    margin-left: 200px;
+    font-size: 18px;
+    color: #272e4f;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.localizacao{
+    margin-left: 20px;
+    font-weight: bolder;  
+}
+
+#local{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 0%, 0.302);
+    background:#272e4f21;
+    width:300px;
+    font-size: 18px;
+   
+}
+
+
+
     
 /* RODAPE */
 
