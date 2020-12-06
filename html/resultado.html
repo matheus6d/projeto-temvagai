@@ -25,6 +25,36 @@
         
       </div >
 
+    <br>
+  
+  <div class="pesquisa">  
+   
+    <h3>Filtre sua Busca</h3>  
+  
+    <form name="pesquisa" method="post" action="#" onsubmit="return validaForm(this);">
+    <p>Localização: <input type="text" name="local" id="local" /></p>
+    <p>Residência:
+      <select name="residencia" id="residencia">
+        <option>Casa</option>
+        <option>Apartamento</option>
+       </select>
+    <p>Quantidade de pesssoas:
+      <select name="quantidade" id="quantidade">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+     <p>Data: <input type="date" name="data"  id="data"></p>
+    </p><label><input type="submit" name="sbt" value="Enviar" /></label></p>
+  </form>
+ <br>
+  <a href="" style="text-decoration:none" ><b class="novabusca">Nova busca</b> </a>
+  
+</div> 
+
+
       <h1 class="titulo">Resultados da pesquisa</h1>
       <h3 class="subtitulo">Esses são os resultados que encontramos para você!</h3>
     
@@ -43,7 +73,7 @@
             fica ainda relativamente perto do Gerês. Vai adorar este espaço por ser 
             sossegado e tranquilo, o verdadeiro ar do campo. A casa é ideal para casais, 
             aventuras individuais, famílias (com crianças), e grandes grupos.</p>
-            <a href="casa-moderna.html" > <b class="botaoinfo">Leia mais</b></a>
+            <a href="casa-moderna.html" style="text-decoration:none"> <b class="botaoinfo">Leia mais</b></a>
         </div>
 
          <div>
@@ -56,7 +86,7 @@
            com portaria 24h por dia, ambiente familiar, WI-FI, churrasqueira, piscina 
            para desfrutar e relaxar!
          </p>
-         <a href="casa-campo.html" ><b class="botaoinfo">Leia mais</b> </a>
+         <a href="casa-campo.html" style="text-decoration:none" ><b class="botaoinfo"> <un> Leia mais </un></b> </a>
       </div>
 
     <br>
@@ -80,7 +110,7 @@
               
            <b>Descrição:</b> Mini apartamento lindo com aproximadamente 15 mt2, 
            mobiliado, próximo de toda infraestrura que uma pessoa precisa.</p>
-           <a href="mini-apartamento.html" ><b class="botaoinfo">Leia mais</b></a>
+           <a href="mini-apartamento.html" style="text-decoration:none" ><b class="botaoinfo">Leia mais</b></a>
            
         </div>
 
@@ -96,7 +126,7 @@
             geladeira, banheira, equipamentos de quarto podem ser usados, o quarto está equipado 
             com produtos de banho star hotel. 
           </p>
-          <a href="apartamento.html" > <b class="botaoinfo">Leia mais</b></a>
+          <a href="apartamento.html" style="text-decoration:none" > <b class="botaoinfo">Leia mais</b></a>
 
       </div>
 
@@ -112,6 +142,71 @@
       <footer>
         <p>Todos os direitos reservados</p>
      </footer>
+
+     
+     <script>
+      function mudarCSS(cssFile, cssLinkIndex) {
+      
+        var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+      
+        var newlink = document.createElement("link");
+      
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", cssFile);
+      
+        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+      }
+      
+      function validaForm(frm) {
+      /*
+      o parâmetro frm desta função significa: this.form,
+      pois a chamada da função - validaForm(this) foi
+      definida na tag form.
+      */
+          //Não receber localização vazia
+          if(frm.local.value == "") {
+              alert("Por favor, preencha a localização!");
+              frm.local.focus();
+              return false;
+          }
+      
+          //Não receber numero
+          if(!isNaN(frm.local.value)) {
+              alert("Por favor, não preencher com número!");
+              frm.local.focus();
+              return false;
+          } 
+      
+          if(frm.local.value.lenght < 3) {
+              alert("Por favor, aaaaaaaaa!");
+              frm.local.focus();
+              return false;
+          }
+      
+          //Não receber data vazia
+          if(frm.data.value == "") {
+              alert("Por favor, preencha a data!");
+              frm.data.focus();
+              return false;
+          }
+
+           //Não receber data vazia
+           if(frm.categoria.value == "") {
+              alert("Por favor, preencha a categoria!");
+              frm.categoria.focus();
+              return false;
+          }
+    
+      
+         
+          }
+      
+        
+      
+      </script>
+
+     
     
    
 
