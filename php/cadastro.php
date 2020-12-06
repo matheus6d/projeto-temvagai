@@ -1,5 +1,5 @@
 
-<? include('conexão.php');?>
+<? include('conexao.php');?>
 
 <html>
     <head>
