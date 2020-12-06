@@ -5,7 +5,7 @@
     <head>
     <title>Cadastro de vagas</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estilocadastro.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilocadastro.css">
     <meta name="autores" content="Amanda, Matheus e Thalita">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Resultados da pesquisa</title>
@@ -75,7 +75,7 @@ footer{
 
     <!-- MENU --> 
     <div class="navbar">
-        <img class="navlogo" src="img/logo.png">
+        <img class="navlogo" src="../img/logo.png">
         <a href="index.html">Início</a>
         <a href="index.html">Sobre</a>
         <a href="index.html">Locações</a>
@@ -136,7 +136,7 @@ footer{
       <h3> CADASTRO </h3>
       <p>(*) Campos obrigatórios</p><br>
 
-      <form name = "cadastro" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> ">
+      <form name = "cadastro" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validaForm(this);">
             Titulo: <input type="text" name="titulo">
                     <span>* <?php echo $tituloEr;?></span>
                     <br><br>
@@ -181,29 +181,34 @@ footer{
       pois a chamada da função - validaForm(this) foi
       definida na tag form.
       */
-          //Não receber localização vazia
-          if(frm.local.value == "") {
-              alert("Por favor, preencha a localização!");
-              frm.local.focus();
+          //Não receber titulo vazio
+          if(frm.titulo.value == "") {
+              alert("Por favor, preencha o título!");
+              frm.titulo.focus();
               return false;
           }
       
-          //Não receber numero
-          if(!isNaN(frm.local.value)) {
+          //Não receber titulo numero
+          if(!isNaN(frm.titulo.value)) {
               alert("Por favor, não preencher com número!");
-              frm.local.focus();
+              frm.titulo.focus();
               return false;
           } 
       
-          if(frm.local.value.lenght < 3) {
-              alert("Por favor, aaaaaaaaa!");
-              frm.local.focus();
+         //Não receber titulo vazio
+         if(frm.descricao.value == "") {
+              alert("Por favor, preencha a descrição!");
+              frm.descricao.focus();
               return false;
           }
-      
-        
-      
-         
+
+          //Não receber valor vazio
+          if(frm.valor.value == "") {
+              alert("Por favor, preencha o valor!");
+              frm.valor.focus();
+              return false;
+          }
+          
           }
       
         
