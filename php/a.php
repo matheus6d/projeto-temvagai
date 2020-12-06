@@ -1,4 +1,4 @@
-<?php include('conexão.php');
+<?php include('conexao.php');
 
    
         if (!empty($titulo) || !empty($descricao) || !empty($valor) || !empty($categoria) ) {
