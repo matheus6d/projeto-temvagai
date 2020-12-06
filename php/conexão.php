@@ -13,7 +13,7 @@
     }  
         else {
          //echo "Connected successfully";
-         $conn -> select_db("sin143");
+         $conn -> select_db("SIN143");
         }
         
 ?>
