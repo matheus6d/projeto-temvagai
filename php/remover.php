@@ -84,7 +84,7 @@ footer{
 <?php
 
     
-        include('conexão.php');
+        include('conexao.php');
 
 
 
@@ -109,7 +109,7 @@ footer{
             $categoria = $row['categoria'];
 
             echo "<tr><td>$id</td><td>$titulo</td><td>$descricao</td><td>$valor</td><td>$categoria<td>
-                <a href='remove.php?ID=$id'>x</a>
+                <a href='remove.php?ID=$id'>Remover</a>
                 </td></tr>";
         }
 
