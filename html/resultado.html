@@ -33,20 +33,13 @@
   
     <form name="pesquisa" method="post" action="#" onsubmit="return validaForm(this);">
     <p>Localização: <input type="text" name="local" id="local" /></p>
-    <p>Residência:
-      <select name="residencia" id="residencia">
+    <p>Categoria:
+      <select name="categoria" id="categoria">
         <option>Casa</option>
         <option>Apartamento</option>
        </select>
-    <p>Quantidade de pesssoas:
-      <select name="quantidade" id="quantidade">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-     <p>Data: <input type="date" name="data"  id="data"></p>
+       <p>Valor: <input name="valor" id="valor"></p>
+      <p>Data: <input type="date" name="data"  id="data"></p>
     </p><label><input type="submit" name="sbt" value="Refinar Busca" /></label></p>
   </form>
  <br>
@@ -183,6 +176,13 @@
               frm.local.focus();
               return false;
           }
+
+           //Receber numero
+           if(isNaN(frm.valor.value)) {
+              alert("Por favor, preencher valor com número!");
+              frm.valor.focus();
+              return false;
+          } 
       
           //Não receber data vazia
           if(frm.data.value == "") {
@@ -191,12 +191,7 @@
               return false;
           }
 
-           //Não receber data vazia
-           if(frm.categoria.value == "") {
-              alert("Por favor, preencha a categoria!");
-              frm.categoria.focus();
-              return false;
-          }
+         
     
       
          
