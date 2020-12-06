@@ -1,6 +1,6 @@
 
 
-<? include('conexão.php');?>
+<? include('conexao.php');?>
     
     <?php   
          if (!empty($titulo) || !empty($descricao) || !empty($valor) || !empty($categoria) ) {
