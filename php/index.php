@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estiloindex.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloindex.css">
     <meta name="autores" content="Amanda, Matheus e Thalita">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="../css/slider.css">
     <title>Tem vaga aí?</title>
 </head>
 
@@ -18,7 +18,7 @@
 
     <!-- MENU --> 
     <div class="navbar">
-        <img class="navlogo" src="img/logo.png">
+        <img class="navlogo" src="../img/logo.png">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#locacoes">Locações</a>
@@ -32,9 +32,9 @@
     include 'slider.php';
 
     slider([
-        "img/1.jpg",
-        "img/2.jpg",
-        "img/3.jpg"
+        "../img/1.jpg",
+        "../img/2.jpg",
+        "../img/3.jpg"
     ]);
     ?>
     
