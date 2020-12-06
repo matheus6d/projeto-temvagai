@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../css/estiloindex.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloindex.css">
     <meta name="autores" content="Amanda, Matheus e Thalita">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
     <title>Tem vaga aí?</title>
 </head>
 
-<body>
+<body >
     <!-- CONTEÚDO DE AVISO -->
     <div class="aviso">
         <span>Confira informações sobre à COVID-19</span> <a href="https://coronavirus.saude.gov.br/" class="avisobotao">SABER MAIS</a>
@@ -18,7 +18,7 @@
 
     <!-- MENU --> 
     <div class="navbar">
-        <img class="navlogo" src="../img/logo.png">
+        <img class="navlogo" src="img/logo.png">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#locacoes">Locações</a>
@@ -32,9 +32,9 @@
     include 'slider.php';
 
     slider([
-        "../img/1.jpg",
-        "../img/2.jpg",
-        "../img/3.jpg"
+        "img/1.jpg",
+        "img/2.jpg",
+        "img/3.jpg"
     ]);
     ?>
     
@@ -95,7 +95,15 @@
     <br><br><br><br>
 
   </div>
- 
+      
+  <div >
+            <div >
+                <h1 id="nome1">Nome</h1>
+                <h2 id="idade1">Idade</h2>
+                <h3>Bangalo Inteiro - Rio Paranaiba - MG</h3>
+                <p id="comentario1">Comentario</p>
+            </div>
+  </div>
 
     <!-- Contato -->
     <h1 class="tituloContato"  id="contato">Contato</h1>
@@ -155,10 +163,12 @@ function validaForm(frm) {
     }
 }
 
-/*Função de preencher com CSV
-d3.csv("dropdown.csv", function(data) {
+/*Função de preencher com CSV*/
+
+
+/*d3.csv("../js/dropdown.csv", function(data) {
   for(var i = 0; i < data.length; i++) {
-    console.log(data[i].quant);
+    //console.log(data[i].quant);
   }
 }*/
 
